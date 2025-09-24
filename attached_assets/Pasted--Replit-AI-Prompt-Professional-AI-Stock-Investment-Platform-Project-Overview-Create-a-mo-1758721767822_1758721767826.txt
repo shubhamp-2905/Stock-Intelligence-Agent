@@ -1,0 +1,244 @@
+# 🚀 Replit AI Prompt: Professional AI Stock Investment Platform
+
+## Project Overview
+Create a modern, professional AI-powered stock investment analysis platform with a clean black-and-white UI. This should be a full-stack web application that allows users to compare two stocks and get AI-generated investment recommendations.
+
+## 📋 Technical Requirements
+
+### Frontend (React + Tailwind CSS)
+- Modern React application with functional components and hooks
+- Tailwind CSS for professional black/white/gray styling
+- Responsive design that works on all devices
+- Clean, minimalist UI with smooth animations and hover effects
+- Professional typography using Inter font
+
+### Backend (Python Flask)
+- Flask API with CORS enabled for React frontend
+- Integration with yfinance for real-time stock data
+- LangChain integration with Google Gemini AI for analysis
+- RESTful API endpoints for stock data and AI analysis
+
+### Key Features Required
+1. **Stock Input Form**: Two input fields for stock symbols with validation
+2. **API Key Input**: Secure input for Google Gemini API key
+3. **Real-time Analysis**: Fetch live stock data and generate AI comparison
+4. **Professional Results Display**: Side-by-side comparison cards with metrics
+5. **AI Recommendations**: Comprehensive investment analysis and recommendations
+6. **Error Handling**: Professional error messages and loading states
+
+## 🎨 UI/UX Design Specifications
+
+### Color Scheme
+- Primary: Black (#000000)
+- Secondary: White (#FFFFFF)
+- Accent: Gray shades (#F9FAFB, #F3F4F6, #E5E7EB, #9CA3AF)
+- Success: Green (#10B981)
+- Error: Red (#EF4444)
+- Warning: Yellow (#F59E0B)
+
+### Design Elements
+- Glass morphism effects with subtle shadows
+- Rounded corners (rounded-lg, rounded-2xl)
+- Smooth transitions and hover animations
+- Professional cards with borders and shadows
+- Modern icons from Lucide React
+- Clean typography hierarchy
+
+### Layout Structure
+```
+Header: Logo + Navigation
+Hero Section: Title + Description + Feature highlights
+Input Section: API key + Stock symbols + Analysis button
+Results Section: Stock comparison cards + AI recommendations
+Footer: Copyright + Disclaimer
+```
+
+## 📁 Required File Structure
+
+```
+ai-stock-platform/
+├── frontend/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ui/
+│   │   │   │   ├── Button.js
+│   │   │   │   ├── Card.js
+│   │   │   │   └── Input.js
+│   │   │   ├── StockAnalysis.js
+│   │   │   └── Header.js
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── package.json
+│   └── tailwind.config.js
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── .env
+└── README.md
+```
+
+## 🔧 Backend Implementation Details
+
+### Required Python Libraries
+```
+Flask==2.3.3
+Flask-CORS==4.0.0
+yfinance==0.2.22
+langchain==0.1.0
+langchain-google-genai==0.0.6
+langchain-core==0.1.0
+python-dotenv==1.0.0
+```
+
+### API Endpoints Required
+- `POST /api/ai/analyze` - Generate AI stock comparison
+- `POST /api/stock/fundamentals` - Get stock fundamental data
+- `GET /api/health` - Health check endpoint
+
+### Stock Analysis Logic
+Use yfinance to fetch:
+- Current stock price and daily change
+- Market capitalization
+- P/E ratio (trailing and forward)
+- Dividend yield
+- Price-to-book ratio
+- 52-week high/low
+- Analyst recommendations
+
+### AI Integration
+- Use LangChain with Google Gemini AI
+- Create tools for stock fundamental analysis
+- Generate comprehensive investment recommendations
+- Include risk assessment and time horizon suggestions
+
+## 📱 Frontend Component Requirements
+
+### Main App Component
+- State management for API key, stock symbols, analysis results
+- Form validation and error handling
+- Loading states during analysis
+- Responsive layout with Tailwind CSS
+
+### UI Components
+- **Button**: Multiple variants (primary, secondary, loading states)
+- **Input**: Professional input fields with validation styling
+- **Card**: Reusable card component for stock data display
+- **Header**: Logo, title, and feature highlights
+
+### Stock Analysis Display
+- Side-by-side comparison cards for both stocks
+- Key metrics display (price, change, market cap, P/E, dividend)
+- AI recommendation section with professional formatting
+- Risk assessment and investment timeline
+
+## 🎯 Specific Implementation Requirements
+
+### React Frontend Setup
+```javascript
+// Required dependencies in package.json
+{
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24"
+  }
+}
+```
+
+### Tailwind Configuration
+- Configure for black/white/gray theme
+- Add custom animations for smooth interactions
+- Include Inter font family
+- Mobile-first responsive breakpoints
+
+### Flask Backend Structure
+```python
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+import yfinance as yf
+from langchain.agents import AgentExecutor, create_tool_calling_agent
+from langchain.tools import tool
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
+
+# Tool functions for stock analysis
+@tool
+def get_stock_fundamentals(symbol: str) -> str:
+    # Implementation for fetching stock data
+
+@tool  
+def get_analyst_recommendations(symbol: str) -> str:
+    # Implementation for analyst data
+
+# API routes for frontend integration
+```
+
+## 🚨 Important Implementation Notes
+
+### Security & Validation
+- Validate all user inputs (stock symbols, API keys)
+- Implement proper error handling for API failures
+- Secure API key handling (don't log or expose)
+- CORS configuration for frontend-backend communication
+
+### User Experience
+- Loading spinners during API calls
+- Clear error messages for invalid inputs
+- Professional success/error states
+- Responsive design for mobile devices
+
+### Professional Styling
+- Use professional financial platform aesthetics
+- Consistent spacing and typography
+- Subtle animations and transitions
+- Clean, trustworthy design elements
+
+## 🎨 Visual Examples
+
+### Header Design
+- Black background with white "StockAI" logo
+- Subtitle: "Investment Analysis Platform"
+- Security and AI-powered badges
+
+### Input Section
+- Clean white card with rounded corners
+- Professional form fields with labels
+- Toggle for API key visibility
+- Prominent analysis button with loading states
+
+### Results Display
+- Side-by-side stock comparison cards
+- Professional metrics display
+- AI recommendation section with clear formatting
+- Investment disclaimer at bottom
+
+## 🔄 Expected User Flow
+1. User enters Google Gemini API key
+2. User inputs two stock symbols (e.g., GOOGL, MSFT)
+3. User clicks "Generate Analysis" button
+4. App shows loading state while fetching data
+5. Display professional comparison results
+6. Show AI-generated investment recommendations
+7. Include risk assessment and investment timeline
+
+## 📈 Success Criteria
+- Professional, clean UI that looks like a real fintech platform
+- Functional stock analysis with real data
+- AI-powered recommendations using LangChain + Gemini
+- Responsive design working on all devices
+- Proper error handling and loading states
+- Professional typography and consistent spacing
+
+Create this as a complete, production-ready application that demonstrates modern web development best practices with a focus on professional financial analysis presentation.
