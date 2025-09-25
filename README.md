@@ -42,7 +42,23 @@ Built with modern design and powered by **Google Gemini AI + Yahoo Finance integ
 ## 📷 Screenshots  
 
 ### 🔥 Landing Page  
-![StockAI Screenshot](./assets/screenshot.jpg)  
+![WhatsApp Image 2025-09-24 at 19 35 35_f72e33c5](https://github.com/user-attachments/assets/b058f91b-786d-41f6-ac5e-24e11e381f79)
+
+### UI 
+![WhatsApp Image 2025-09-24 at 19 43 11_1f5723d0](https://github.com/user-attachments/assets/c54f3ac8-724a-4478-a008-31739ac78fcf)
+---
+![WhatsApp Image 2025-09-24 at 19 45 48_6e81f5ae](https://github.com/user-attachments/assets/2f092511-8512-4fa3-914e-16be15b2ee5c)
+---
+![WhatsApp Image 2025-09-24 at 19 52 16_7724acfa](https://github.com/user-attachments/assets/eaad6144-b005-4b28-8bf7-f7e9be9d9bda)
+---
+![WhatsApp Image 2025-09-24 at 19 52 55_62aa2bd8](https://github.com/user-attachments/assets/60ed3e2c-1ea1-4a28-a0e2-0bb97f082642)
+---
+![WhatsApp Image 2025-09-24 at 19 53 30_f1b975e9](https://github.com/user-attachments/assets/794fe194-65b4-4511-9d0b-04fbb2bb8184)
+---
+![WhatsApp Image 2025-09-24 at 19 54 08_fb705376](https://github.com/user-attachments/assets/58194cfe-2e90-49d8-8afc-290445f9ff04)
+---
+
+
 
 ---
 
@@ -96,5 +112,4 @@ npm start
 🌍 GitHub: shubhamp-2905
 ---
 
-
-
+## Thank You ❤
